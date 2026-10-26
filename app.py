@@ -32,8 +32,8 @@ def typelistpokemon():
 def pokemonsearch():
     inputname = input("give name ")
     for pokemondataiterate in range(len(data)):
-        if inputname in data[pokemondataiterate]["name"]:
-            print(data[pokemondataiterate]["name"])
+        if inputname in data[pokemondataiterate]["name"]["english"]:
+            print(data[pokemondataiterate]["name"]["english"])
 pokemonsearch()
 #Based on user input, show all moves that a pokemon could learn based on their type. For example, if Charizard is fire/fyling, show all fire and flying moves. HINT import the moves.json file too!
 
