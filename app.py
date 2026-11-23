@@ -6,6 +6,7 @@ moves = open("./moves.json", encoding="utf8")
 data = json.load(pokedex)
 
 # Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
+<<<<<<< HEAD
 def pokemonnameiterate():
     for i in range(len(data)):
         print(data[i]["name"]["english"])
@@ -21,6 +22,12 @@ def pokemoniterate():
     for i in range(len(data)):
         print(data[i]["name"]["english"])
 # Add a language choice feature and print the pokemons name based on the user input
+=======
+def pokemoniterate():
+    for i in range(len(data)):
+        print(data[i]["name"]["english"])
+# Add a language choice feature and print the pokemons name based on the user input
+>>>>>>> a14c5f8701bc79e73ffba6a1c474bb565b8a915e
 def findpokemonwithlangauge():
     ajsfa = input("What language ")
 
@@ -30,6 +37,7 @@ def findpokemonwithlangauge():
         if data[i]["name"]["english"] == f:
             print(data[i]["name"][ajsfa])
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
+<<<<<<< HEAD
 def typelistpokemon():
     inputtype = input("pick a type ")
     listpokemon = []
@@ -51,6 +59,18 @@ def typepokemonlist():
                 pokelist.append(data[i]["name"]["english"])
     print(pokelist)
 
+=======
+def typepokemonlist():
+    typepokemon = input("Give me a type ")
+    pokelist = []
+    for i in range(len(data)):
+        f = data[i]["type"]
+        for g in f:
+            if g == typepokemon:
+                pokelist.append(data[i]["name"]["english"])
+    print(pokelist)
+
+>>>>>>> a14c5f8701bc79e73ffba6a1c474bb565b8a915e
 typepokemonlist()
         
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
