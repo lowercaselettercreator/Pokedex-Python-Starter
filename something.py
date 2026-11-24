@@ -6,7 +6,7 @@ with open("Jikan.json", "r", encoding="utf-8") as f:
 
 anime_list = data["data"]   # a list of 25 anime (each one is a dictionary)
 
-
+print(anime_list)
 # ------------------------------------------------------------
 # Q1. Filtering and counting
 # Print the title and score of every anime with a score
