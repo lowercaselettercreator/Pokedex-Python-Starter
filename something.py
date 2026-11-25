@@ -52,7 +52,6 @@ def maxepisodes():
            list.append(i["episodes"])
     g=max(list)
     print(g)
-maxepisodes()
 
 
 
@@ -62,7 +61,12 @@ maxepisodes()
 # dictionary with a "name" key (for example, "Comedy").
 # Print the title of every anime that has the genre "Comedy".
 # ------------------------------------------------------------
-
+def findgenre():
+    for i in anime_list:
+        for f in i["genres"]:
+            if f["name"] == "Comedy":
+                print(i["title"])
+findgenre()
 
 
 
