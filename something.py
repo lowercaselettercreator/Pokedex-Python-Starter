@@ -6,14 +6,18 @@ with open("Jikan.json", "r", encoding="utf-8") as f:
 
 anime_list = data["data"]   # a list of 25 anime (each one is a dictionary)
 
-print(anime_list)
 # ------------------------------------------------------------
 # Q1. Filtering and counting
 # Print the title and score of every anime with a score
 # greater than 9.0. Then print how many there were.
 # ------------------------------------------------------------
-
-
+def scorecount():
+    for i in anime_list:
+        try:
+            if i["score"] > 9:
+                print(i["title"]) 
+        except KeyError:
+            continue           
 
 
 # ------------------------------------------------------------
@@ -21,6 +25,15 @@ print(anime_list)
 # Calculate and print the average score of all the anime
 # in the list. Round the answer to 2 decimal places.
 # ------------------------------------------------------------
+def averagescore():
+    a=0
+    b=0
+    for i in anime_list:
+        a += i["score"]
+        b += 1
+    g = a / b
+    print(f"{g:,.2f}")
+
 
 
 
@@ -32,7 +45,14 @@ print(anime_list)
 # Hint: look closely at the "episodes" values. Does every
 # anime have a number?
 # ------------------------------------------------------------
-
+def maxepisodes():
+    list=[]
+    for i in anime_list:
+        if type(i["episodes"]) == int or type(i["episodes"]) == float:
+           list.append(i["episodes"])
+    g=max(list)
+    print(g)
+maxepisodes()
 
 
 
